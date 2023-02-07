@@ -6,6 +6,7 @@ const productController = new ProductController();
 
 app.use(express.json());
 
-app.post('/products', (req, res) => { productController.insertProduct(req, res); });
+app.post('/products', productController.insertProduct);
+app.get('/products', productController.getAllProducts);
 
 export default app;
