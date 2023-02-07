@@ -12,3 +12,9 @@ export interface IUser {
   level: number;
   vocation: string;
 }
+
+export interface IOrder {
+  id?: number,
+  userId: number,
+  productsIds: number[]
+}
